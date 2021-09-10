@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const userAccountSchema = new Schema({
+const transactionSchema = new Schema({
     transactionId: {
         type: String,
         required: true
@@ -17,6 +17,6 @@ const userAccountSchema = new Schema({
     }
 });
 
-const User = mongoose.model("User", userAccountSchema);
+const Transaction = mongoose.model("Transaction", transactionSchema);
 
-module.exports = User;
+module.exports = Transaction;
