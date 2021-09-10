@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 
 const app = express();
 
-mongoose.connect("mongodb://localhost:27017/ethereumDB", 
+mongoose.connect("mongodb://localhost:27017/tronDB", 
 {
 	useNewUrlParser: true, 
 	useUnifiedTopology: true
@@ -14,7 +14,8 @@ mongoose.connect("mongodb://localhost:27017/ethereumDB",
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use("/", require("./routes/routes"));
+// app.use("/", require("./routes/routes"));
+app.use("/", require("./routes/tron_routes"));
 
 
 

@@ -19,7 +19,7 @@ router.get("/userTransactionDetails", (req, res) => {
 
 
 router.get("/userTransactionDetails/:transactionId", (req, res) => {
-    Transaction.findById(req.params.userId).exec((err, transaction) => {
+    Transaction.findById(req.params.transactionId).exec((err, transaction) => {
         if (err) {
             res.json(err);
         }
