@@ -15,8 +15,8 @@ mongoose.connect("mongodb://localhost:27017/tronDB",
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // app.use("/", require("./routes/routes"));
-app.use("/", require("./routes/tron_routes"));
-
+// app.use("/", require("./routes/tron_routes"));
+app.use("/", require("./routes/binance_routes"));
 
 
 
